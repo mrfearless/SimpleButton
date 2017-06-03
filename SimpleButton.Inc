@@ -58,7 +58,8 @@ ENDIF
 ; SimpleButton Messages:
 SB_GETPROPERTY                  EQU WM_USER + 1800
 SB_SETPROPERTY                  EQU WM_USER + 1799
-
+SB_GETSTATE                     EQU WM_USER + 1798 ; wParam = NULL, lParam = NULL. EAX contains state (TRUE/FALSE)
+SB_SETSTATE                     EQU WM_USER + 1797 ; wParam = TRUE/FALSE, lParam = NULL
 
 ; SimpleButton Button Styles:
 SBBS_CENTER                     EQU 0h  ; Align text centrally

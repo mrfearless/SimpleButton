@@ -1,0 +1,4 @@
+#include "Res/SB3Mnu.rc"
+#include "Res/SB3Ver.rc"
+#include "Res/SB3Dlg.rc"
+#include "Res/SB3Res.rc"

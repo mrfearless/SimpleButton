@@ -377,6 +377,15 @@ _SB_WndProc PROC PRIVATE USES EBX hWin:HWND, uMsg:UINT, wParam:WPARAM, lParam:LP
     .ELSEIF eax == SB_SETPROPERTY   
         Invoke __SetExtProperty, hWin, wParam, lParam
         ret
+
+	.ELSEIF eax == SB_GETSTATE ; wParam = NULL, lParam = NULL. EAX contains state (TRUE/FALSE)
+	    Invoke __GetIntProperty, hWin, @SimpleButtonSelectedState
+	    ret
+	 
+	.ELSEIF eax == SB_SETSTATE ; wParam = TRUE/FALSE, lParam = NULL
+	    Invoke __SetIntProperty, hWin, @SimpleButtonSelectedState, wParam
+	    Invoke InvalidateRect, hWin, NULL, TRUE
+	    ret
         
     .ENDIF
     
@@ -807,6 +816,26 @@ _SB_PaintBorder PROC PRIVATE hControl:DWORD, hdc:DWORD, lpRect:DWORD, bEnabledSt
     .ENDIF     
     ret
 _SB_PaintBorder ENDP
+
+
+;-------------------------------------------------------------------------------------
+; SimpleButtonGetState - Returns in eax TRUE of FALSE if control is selected or not
+;-------------------------------------------------------------------------------------
+SimpleButtonGetState PROC PUBLIC hControl:DWORD
+    Invoke SendMessage, hControl, SB_GETSTATE, 0, 0
+    ret
+SimpleButtonGetState ENDP
+
+
+;-------------------------------------------------------------------------------------
+; SimpleButtonSetState - Set control to selected state (TRUE) or not (FALSE)
+;-------------------------------------------------------------------------------------
+SimpleButtonSetState PROC PUBLIC hControl:DWORD, bState:DWORD
+    Invoke SendMessage, hControl, SB_SETSTATE, bState, 0
+    ret
+SimpleButtonSetState ENDP
+
+
 
 
 ;======================================================================================================================================

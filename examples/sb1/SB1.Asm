@@ -1,22 +1,8 @@
-;.386
-;.model flat,stdcall
-;option casemap:none
 .686
 .MMX
 .XMM
 .model flat,stdcall
 option casemap:none
-include \masm32\macros\macros.asm
-
-;DEBUG32 EQU 1
-
-IFDEF DEBUG32
-    PRESERVEXMMREGS equ 1
-    includelib M:\Masm32\lib\Debug32.lib
-    DBG32LIB equ 1
-    DEBUGEXE textequ <'M:\Masm32\DbgWin.exe'>
-    include M:\Masm32\include\debug32.inc
-ENDIF
 
 include SB1.inc
 
@@ -87,9 +73,9 @@ WndProc proc hWin:HWND,uMsg:UINT,wParam:WPARAM,lParam:LPARAM
         Invoke SimpleButtonCreate, hWin, Addr SBText, 40, 60, 200, 30, IDC_SB1, WS_CHILD or WS_VISIBLE or SBBS_CENTER or SBBS_HAND or SBBS_PUSHBUTTON
         mov hSB1, eax
         
-        ;Invoke SimpleButtonSetProperty, hSB1, @SimpleButtonTextColor, SBRGBCOLOR(26,103,140)
-        ;Invoke SimpleButtonSetProperty, hSB1, @SimpleButtonBorderColor, SBRGBCOLOR(27,161,226)
-        ;Invoke SimpleButtonSetProperty, hSB1, @SimpleButtonBorderColorAlt, SBRGBCOLOR(27,161,226)
+        Invoke SimpleButtonSetProperty, hSB1, @SimpleButtonTextColor, SBRGBCOLOR(26,103,140)
+        Invoke SimpleButtonSetProperty, hSB1, @SimpleButtonBorderColor, SBRGBCOLOR(27,161,226)
+        Invoke SimpleButtonSetProperty, hSB1, @SimpleButtonBorderColorAlt, SBRGBCOLOR(27,161,226)
         
 	.ELSEIF eax == WM_COMMAND
 		mov eax, wParam
@@ -120,6 +106,48 @@ WndProc proc hWin:HWND,uMsg:UINT,wParam:WPARAM,lParam:LPARAM
 WndProc endp
 
 end start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -54,20 +54,20 @@ Menu=1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0
 [VerInf]
 Nme=VERINF1
 ID=1
-FV=1.0.0.3
-PV=1.0.0.3
+FV=1.0.0.4
+PV=1.0.0.4
 VerOS=0x00000004
 VerFT=0x00000001
 VerLNG=0x00000409
 VerCHS=0x000004B0
-ProductVersion=1.0.0.3
-ProductName=SB1.exe
-OriginalFilename=SB1.exe
+ProductVersion=1.0.0.4
+ProductName=SB2.exe
+OriginalFilename=SB2.exe
 LegalTrademarks=mrfearless 2017
 LegalCopyright=mrfearless 2017
-InternalName=SB1.exe
+InternalName=SB2.exe
 FileDescription=SimpleButton Example #2
-FileVersion=1.0.0.3
+FileVersion=1.0.0.4
 CompanyName=github.com/mrfearless
 [Group]
 Group=Assembly,Resources,Misc
@@ -77,7 +77,7 @@ Group=Assembly,Resources,Misc
 4=2
 5=2
 [AutoLoad]
-AutoLoad=2,1,4,3
+AutoLoad=1
 [RADebugBP]
 2=
 1=
@@ -86,13 +86,13 @@ AutoLoad=2,1,4,3
 Settings=1279
 Milestones=129
 MilestoneEvery=10
-MilestoneEveryCurrent=3
+MilestoneEveryCurrent=4
 MilestoneOnBuild=0.0.0.0
 MilestoneOnTime=2
 MilestoneOnDate=0
 MilestoneOnDateWhen=1
 MilestoneOnDateStatus=0
-MilestoneOnDateDate=2
+MilestoneOnDateDate=3
 MilestoneOnDateTimeYear=2017
 MilestoneOnDateTimeMonth=6
 MilestoneOnDateTimeDate=2
@@ -116,11 +116,11 @@ ProductVer2Range=0
 ProductVer3Range=0
 ProductVer4Range=0
 [PTimer]
-PTimer=2827423
+PTimer=4666301
 [Size]
 4=0,0,0,0
-1=0,0,0,0,2995
-2=0,0,0,0,1834
+1=0,0,0,0,2511
+2=0,0,0,0,910
 3=0,0,0,0,67
 [Collapse]
 1=
