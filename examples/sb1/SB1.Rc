@@ -1,0 +1,4 @@
+#include "Res/SB1Mnu.rc"
+#include "Res/SB1Ver.rc"
+#include "Res/SB1Dlg.rc"
+#include "Res/SB1Res.rc"

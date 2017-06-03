@@ -1,0 +1,27 @@
+#define VERINF1 1
+VERINF1 VERSIONINFO
+FILEVERSION 1,0,0,2
+PRODUCTVERSION 1,0,0,2
+FILEOS 0x00000004
+FILETYPE 0x00000001
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904B0"
+    BEGIN
+      VALUE "CompanyName", "github.com/mrfearless\0"
+      VALUE "FileVersion", "1.0.0.2\0"
+      VALUE "FileDescription", "SimpleButton Example #1\0"
+      VALUE "InternalName", "SB1.exe\0"
+      VALUE "LegalCopyright", "mrfearless 2017\0"
+      VALUE "LegalTrademarks", "mrfearless 2017\0"
+      VALUE "OriginalFilename", "SB1.exe\0"
+      VALUE "ProductName", "SB1.exe\0"
+      VALUE "ProductVersion", "1.0.0.2\0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 0x04B0
+  END
+END

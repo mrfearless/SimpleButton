@@ -1,0 +1,143 @@
+[Project]
+Assembler=masm
+Type=Win32 App
+Description=SB2
+Backup=$P\Bak\
+Group=1
+GroupExpand=1
+Ver.rc=1
+[Files]
+1=SB2.Asm
+2=SB2.Inc
+3=SB2.Rc
+4=SB2.dlg
+5=SB2.mnu
+[MakeFiles]
+0=SB2.rap
+1=SB2.rc
+2=SB2.asm
+3=SB2.obj
+4=SB2.res
+5=SB2.exe
+6=SB2.def
+7=SB2.dll
+8=SB2.txt
+9=SB2.lib
+10=SB2.mak
+11=SB2.hla
+12=SB2.com
+13=
+14=
+15=
+16=
+17=
+18=SB2.pdb
+[MakeDef]
+Menu=1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0
+1=4,O,$B\RC.EXE /v,1
+2=3,O,$B\ML.EXE /c /coff /Cp /nologo /I"$I",2
+3=5,O,$B\LINK.EXE /SUBSYSTEM:WINDOWS /RELEASE /VERSION:4.0 /LIBPATH:"$L" /OUT:"$5",3,4
+4=0,0,,5
+5=rsrc.obj,O,$B\CVTRES.EXE,rsrc.res
+6=*.obj,O,$B\ML.EXE /c /coff /Cp /nologo /I"$I",*.asm
+7=0,0,"$E\x32dbg.exe",5
+11=4,O,$B\RC.EXE /v,1
+12=3,O,$B\ML.EXE /c /coff /Cp /Zi /Zd /nologo /I"$I",2
+13=5,O,$B\LINK.EXE /SUBSYSTEM:WINDOWS /DEBUG /DEBUGTYPE:CV /PDB:"$18" /VERSION:4.0 /LIBPATH:"$L" /OUT:"$5",3,4
+14=0,0,,5
+15=rsrc.obj,O,$B\CVTRES.EXE,rsrc.res
+16=*.obj,O,$B\ML.EXE /c /coff /Cp /nologo /I"$I",*.asm
+17=0,0,"$E\x32dbg.exe",5
+[Resource]
+1=,1,8,SB2.xml
+[StringTable]
+[VerInf]
+Nme=VERINF1
+ID=1
+FV=1.0.0.3
+PV=1.0.0.3
+VerOS=0x00000004
+VerFT=0x00000001
+VerLNG=0x00000409
+VerCHS=0x000004B0
+ProductVersion=1.0.0.3
+ProductName=SB1.exe
+OriginalFilename=SB1.exe
+LegalTrademarks=mrfearless 2017
+LegalCopyright=mrfearless 2017
+InternalName=SB1.exe
+FileDescription=SimpleButton Example #2
+FileVersion=1.0.0.3
+CompanyName=github.com/mrfearless
+[Group]
+Group=Assembly,Resources,Misc
+1=1
+2=1
+3=2
+4=2
+5=2
+[AutoLoad]
+AutoLoad=2,1,4,3
+[RADebugBP]
+2=
+1=
+0=
+[VersionControl]
+Settings=1279
+Milestones=129
+MilestoneEvery=10
+MilestoneEveryCurrent=3
+MilestoneOnBuild=0.0.0.0
+MilestoneOnTime=2
+MilestoneOnDate=0
+MilestoneOnDateWhen=1
+MilestoneOnDateStatus=0
+MilestoneOnDateDate=2
+MilestoneOnDateTimeYear=2017
+MilestoneOnDateTimeMonth=6
+MilestoneOnDateTimeDate=2
+MilestoneOnDateTimeHour=16
+MilestoneOnDateTimeMin=7
+MilestoneOnDateTimeSec=9
+MilestoneOnDateTimeStatus=0
+BackupLocation=M:\radasm\Masm\Projects\VCBackups\
+CompressionLevel=0
+DefaultComment=Project $N, $Z, Backup Created On $D At $T.
+ExcludeExt1=\
+ExcludeExt2=\
+ExcludeExt3=\
+ExcludeExt4=\
+FileVerLength=4
+FileVer2Range=0
+FileVer3Range=0
+FileVer4Range=0
+ProductVerLength=4
+ProductVer2Range=0
+ProductVer3Range=0
+ProductVer4Range=0
+[PTimer]
+PTimer=2827423
+[Size]
+4=0,0,0,0
+1=0,0,0,0,2995
+2=0,0,0,0,1834
+3=0,0,0,0,67
+[Collapse]
+1=
+2=
+3=
+[GroupExpand]
+GroupExpand=1,0,1,0
+[BookMark]
+0=
+1=
+2=
+3=
+4=
+5=
+6=
+7=
+8=
+9=
+[BreakPoint]
+0=
