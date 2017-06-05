@@ -370,15 +370,15 @@ _SB_WndProc PROC PRIVATE USES EBX hWin:HWND, uMsg:UINT, wParam:WPARAM, lParam:LP
     
     ; custom messages start here
     
-    .ELSEIF eax == SB_GETPROPERTY
+    .ELSEIF eax == SB_GETPROPERTY ; wParam = dwProperty, lParam = NULL. EAX = dwPropertyValue
         Invoke __GetExtProperty, hWin, wParam
         ret
         
-    .ELSEIF eax == SB_SETPROPERTY   
+    .ELSEIF eax == SB_SETPROPERTY ; wParam = dwProperty, lParam = dwPropertyValue
         Invoke __SetExtProperty, hWin, wParam, lParam
         ret
 
-	.ELSEIF eax == SB_GETSTATE ; wParam = NULL, lParam = NULL. EAX contains state (TRUE/FALSE)
+	.ELSEIF eax == SB_GETSTATE ; wParam = NULL, lParam = NULL. EAX = dwState
 	    Invoke __GetIntProperty, hWin, @SimpleButtonSelectedState
 	    ret
 	 
